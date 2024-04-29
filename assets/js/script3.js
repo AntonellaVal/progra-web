@@ -40,6 +40,13 @@ const MostrarDigimon = async () => {
             const cardText = document.createElement('p');
             cardText.classList.add('card-title');
             cardText.textContent = 'nivel: ${digimon.level}';
+
+            cardBody.appendChild(cardTitle);
+            cardBody.appendChild(cardText);
+            card.appendChild(cardImg);
+            card.appendChild(cardBody);
+            cardCol.appendChild(card);
+            digimonRow.appendChild(cardCol);
         });
     } catch (error) {
     console.error('error al obtener datos de digimon:', error);
@@ -47,5 +54,3 @@ const MostrarDigimon = async () => {
 }
 
 MostrarDigimon();
-
-console.log("holaaaaaaaaaaaa");
